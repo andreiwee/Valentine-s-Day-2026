@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <link rel = "stylesheet" href = "style.css">
+    <title> Valentine's 2026! </title>
+</head>
+
+<body>
+    <div id = "background"></div>
+
+    <div id = "main_container">
+        <h1 id = "question"> Will you be my Valentine? </h1>
+    </div>
+    <div id="sub_main">
+        <div class="button-container" id="no-container">
+            <button type = "button" id = "buttonno" onmouseover = "moveRandom()"> No </button>
+        </div>
+        <div class="button-container" id="yes-container">
+            <button type = "button" id = "buttonyes"> <a href = "yes_page.html">Yes</a></button>
+        </div>
+    </div>
+    <script>
+        function moveRandom() {
+            const button = document.getElementById('buttonno');
+            const container = document.getElementById('no-container');
+            // Ensure container is fixed for viewport positioning
+            container.style.position = 'fixed';
+            // Get button size (after fixed positioning)
+            const buttonRect = button.getBoundingClientRect();
+            const buttonWidth = buttonRect.width;
+            const buttonHeight = buttonRect.height;
+            // Get viewport size
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+            // Calculate max left/top so button stays fully visible
+            const maxLeft = viewportWidth - buttonWidth;
+            const maxTop = viewportHeight - buttonHeight;
+            // Generate random position
+            const randomLeft = Math.random() * maxLeft;
+            const randomTop = Math.random() * maxTop;
+            // Move the container
+            container.style.left = `${randomLeft}px`;
+            container.style.top = `${randomTop}px`;
+        }
+    </script>
+</body>

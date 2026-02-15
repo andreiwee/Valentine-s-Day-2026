@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'HomemadeApple';
+  src: url('HomemadeApple-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'ArchivoBlack';
+  src: url('ArchivoBlack-Regular.ttf') format('truetype'),
+}
+
+#main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sub_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+a {
+  color: #FFEFDE;
+  font-family: ArchivoBlack;
+  text-decoration: none;
+}
+
+#buttonno, #buttonyes {
+  background-color: #FF8585;
+  height: 1.5rem;
+  width: 3rem;
+  color: #FFEFDE;
+  border-radius: 7px;
+  font-family: ArchivoBlack;
+  border: #FFFFFF
+}
+
+#buttonyes:hover{
+  background-color: #FFB3B3;
+  color: #FFEFDE;
+}
+
+#question {
+  font-family: HomemadeApple;
+  color: #FF8585;
+  margin: 0 0 0.25rem 0;
+}
+
+#background {
+  opacity: 0.5;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(pink_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Ensure percentage heights work */
+html, body {
+  height: 100%;
+}
